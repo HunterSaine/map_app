@@ -18,6 +18,6 @@ main {
   border-radius: 25px;
 }
 path:hover {
-  fill: coral;
+  fill: rgb(6, 203, 2);
   stroke: white;
 }
