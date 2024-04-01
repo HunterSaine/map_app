@@ -12,11 +12,21 @@ export class ApiService {
   fetchCountryData(country: string) {
     let subject = new Subject
     let api = `https://api.worldbank.org/v2/country/${country}?format=json`;
-    console.log('HERE!!!!')
-    console.log(this.http.get(api))
-    console.log('EDN!!!')
+    
+    
+    
     return this.http.get(api);
   }
   
-  
+  setCountryData(country: string) {
+    let subject = new Subject();
+    this.fetchCountryData(country).subscribe((data: any) => {
+      subject.next({
+        country: data[1][0].name ,
+        capital: data[1][0].capitalCity ,
+        region: data[1][0].region.value
+      })
+    })
+    return subject.asObservable()
+  }
 }

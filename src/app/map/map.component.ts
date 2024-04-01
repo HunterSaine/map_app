@@ -12,7 +12,9 @@ export class MapComponent {
 
   setCountryData(event: any) {
     console.log("event", event.target.id);
-    this.apiService.fetchCountryData(event.target.id).subscribe(data => console.log('DATA!!!', data))
+    this.apiService.setCountryData(event.target.id).subscribe(data => console.log('DATA!!!', data))
+    
   }
+  
 
 }
