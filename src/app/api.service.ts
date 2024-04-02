@@ -23,6 +23,8 @@ export class ApiService {
         capital: data[1][0].capitalCity,
         region: data[1][0].region.value,
         income: data[1][0].incomeLevel.value,
+        longitude: data[1][0].longitude,
+        latitude: data[1][0].latitude,
       });
     });
     return subject.asObservable();

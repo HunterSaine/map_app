@@ -1547,14 +1547,23 @@
       </svg>
     </section>
     <section class="map-details">
-      <div>
-        <h2>{{ country.country }}</h2>
+      <div *ngIf="country.country">
+        <div>
+          <h2>Name: {{ country.country }}</h2>
+        </div>
+        <h3>Capital City: {{ country.capital }}</h3>
+        <h3>Region: {{ country.region }}</h3>
+        <h3>Income Level: {{ country.income }}</h3>
+        <h3>Longitude: {{ country.longitude }}</h3>
+        <h3>Latitude: {{ country.latitude }}</h3>
       </div>
-      <h3>Capital City: {{ country.capital }}</h3>
-      <h3>Region: {{ country.region }}</h3>
-      <h3>Income Level: {{ country.income }}</h3>
+      <div *ngIf="!country.country">
+        <div>
+          <h2><i>Please hover over a country to view data.</i></h2>
+        </div>
+      </div>
     </section>
+
     <div class="footer"><footer>Created by Hunter Saine</footer></div>
   </div>
-  
 </main>
