@@ -1,10 +1,11 @@
-main {
+.content {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-
+  height: 92vh;
   max-width: 100%;
+  background-color: lightblue;
 }
 .map-section {
   width: 65%;
@@ -12,12 +13,28 @@ main {
 .map-details {
   text-align: center;
   background-color: rgb(0, 48, 87);
-  color: white;
+  color: rgb(255, 255, 255);
   width: 20%;
   padding: 5px;
   border-radius: 25px;
 }
 path:hover {
-  fill: rgb(6, 203, 2);
-  stroke: white;
+  fill: rgb(53, 155, 51);
+  stroke: rgb(0, 0, 0);
+  stroke-width: 2px;
+}
+path {
+  fill: #ede0cb;
+  stroke: black;
+}
+h1 {
+  text-align: center;
+  color: white;
+  background-color: rgb(0, 48, 87);
+  margin: 0%;
+  padding: 8px;
+  font-size: 28pt;
+}
+body {
+  height: 100vh;
 }
