@@ -22,6 +22,7 @@ export class ApiService {
         country: data[1][0].name,
         capital: data[1][0].capitalCity,
         region: data[1][0].region.value,
+        income: data[1][0].incomeLevel.value,
       });
     });
     return subject.asObservable();
